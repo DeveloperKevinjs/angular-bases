@@ -1,0 +1,30 @@
+<h1 class="text-3xl font-bold my-3"> {{name}} </h1>
+<dl class="mb-3">
+  <div class="flex gap-2 items-center">
+    <td class="font-bold text-xl">Nombre: </td>
+    <dd>{{name}} </dd>
+  </div>
+  <div class="flex gap-2 items-center">
+    <td class="font-bold text-xl">Edad: </td>
+    <dd>{{age}} </dd>
+  </div>
+  <div class="flex gap-2 items-center">
+    <td class="font-bold text-xl">Metodo: </td>
+    <dd>{{getHeroDescription()}} </dd>
+  </div>
+  <div class="flex gap-2 items-center">
+    <td class="font-bold text-xl">Capitalizado: </td>
+    <dd>{{capitalized}} </dd>
+  </div>
+</dl>
+
+
+<button
+*ngIf="name !== 'SuperMan' "
+type="button" class="mx-1 text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" (click)="changeNameHero()">Cambiar nombre</button>
+<button
+*ngIf="age !== 50 "
+type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"(click)="changeAgeHero()" >Cambiar edad</button>
+<button
+type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"(click)="reset()" >Reset</button>
+

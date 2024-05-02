@@ -1,0 +1,12 @@
+<h1 class="text-xl font-bold dark:text-white">Dragon ball Z</h1>
+<hr />
+
+<div class="grid grid-cols-2">
+  <app-dbz-list
+    [characterList]="character()"
+    (idEmit)="idEmit($event)"
+  ></app-dbz-list>
+  <app-dbz-add-character
+    (characterEmit)="characterEmit($event)"
+  ></app-dbz-add-character>
+</div>

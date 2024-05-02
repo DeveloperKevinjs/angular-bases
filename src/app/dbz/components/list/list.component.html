@@ -1,0 +1,30 @@
+<div class="col">
+  <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+    Listado:
+  </h2>
+  <ul class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
+    <li
+      class="flex items-center justify-between"
+      *ngFor="
+        let character of characterList;
+        let i = index;
+        let isEven = even;
+        let isOdd = odd;
+        let isFirst = first;
+        let isLast = last
+      "
+      [ngClass]="{ 'bg-blue-600': isFirst, 'bg-red-600': isLast }"
+    >
+      <div>
+        <span class="text-white">{{ i + 1 }} </span> - {{ character.name }} -
+        <strong>Power: </strong> {{ character.power }}
+      </div>
+      <button
+        class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+        (click)="onDeleteId(character.id)"
+      >
+        Eliminar
+      </button>
+    </li>
+  </ul>
+</div>
